@@ -101,6 +101,7 @@ var noLabelOptions = {
             to : 60,
             perc : 100
         }
-    ]
+    ],
+    start : '1m'
 };
 
