@@ -1,0 +1,27 @@
+.rt-slider {
+    position: absolute;
+    top: 30px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.rt-slider .rt-value {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.rt-slider .rt-bar {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 0%;
+    background: #e3e3e3;
+}

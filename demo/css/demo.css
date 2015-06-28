@@ -1,0 +1,83 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,latin-ext);
+
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300;
+}
+
+#wrapper,
+header,
+section,
+footer {
+    width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#wrapper {
+    height: 400px;
+}
+
+footer {
+    font-size: 13px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+    font-size: 14px;
+    padding: 0px;
+}
+
+.cont {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float:left;
+}
+
+#minute {
+    background: #fcfcfc;
+}
+
+#minute .rt-bar {
+    background: #9BC44F;
+}
+
+#hour .rt-bar {
+    background: #C8B85B;
+}
+
+#day {
+    background: #fcfcfc;
+}
+
+#day .rt-bar {
+    background: #CB8562;
+}
+
+#no-label .rt-bar {
+    background: #7DD4D1;
+}
+
+.clear {
+    clear: both;
+}
+

@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>realtime-progress</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="../src/js/realtime-progress.js"></script>
+    <script src="js/demo.js"></script>
+    <script>
+        $(function(){
+
+            $('#minute').rtProgress(minuteOptions);
+
+            $('#hour').rtProgress(hourOptions);
+
+            $('#day').rtProgress(dayOptions);
+
+            $('#no-label').rtProgress(noLabelOptions);
+
+        });
+    </script>
+    <link rel="stylesheet" href="../src/css/realtime-progress.css" type="text/css">
+    <link rel="stylesheet" href="css/demo.css" type="text/css">
 </head>
 <body>
+    <header>
+        <h1>realtime-progress</h1>
+    </header>
+    <div id="wrapper">
+        <div id="minute" class="cont"></div>
+        <div id="hour" class="cont"></div>
+        <div id="day" class="cont"></div>
+        <div id="no-label" class="cont"></div>
+        <div class="clear"></div>
+    </div>
+    <section>
+        <div class="cont">
+            <ul>
+                <li>10s period</li>
+                <li>15s repeat</li>
+                <li>callback total + 2</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <ul>
+                <li>24h period</li>
+                <li>24h repeat</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <ul>
+                <li>24s period</li>
+            </ul>
+        </div>
+        <div class="cont">
+            <ul>
+                <li>60s period</li>
+                <li>no label</li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </section>
+    <footer>
+        2015 &copy; <a href="http://www.filipdokladal.cz" title="Filip Dokládal">Filip Dokládal</a>
+    </footer>
 
 </body>
 </html>
