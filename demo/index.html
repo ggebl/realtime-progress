@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>realtime-progress</title>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="../src/js/realtime-progress.js"></script>
+    <script src="../src/js/rtprogress.js"></script>
     <script src="js/demo.js"></script>
     <script>
         $(function(){
@@ -17,9 +17,21 @@
 
             $('#no-label').rtProgress(noLabelOptions);
 
+            $('#destroy').click(function () {
+                $('#minute').rtProgress('destroy', true);
+                return false;
+            });
+
+            $('#reset').click(function () {
+
+                $('#day').rtProgress('reset');
+
+                return false;
+            });
+
         });
     </script>
-    <link rel="stylesheet" href="../src/css/realtime-progress.css" type="text/css">
+    <link rel="stylesheet" href="../src/css/rtprogress.css" type="text/css">
     <link rel="stylesheet" href="css/demo.css" type="text/css">
 </head>
 <body>
@@ -33,6 +45,21 @@
         <div id="no-label" class="cont"></div>
         <div class="clear"></div>
     </div>
+    <section>
+        <div class="cont">
+            <a href="#" id="destroy">destroy</a>
+        </div>
+        <div class="cont">
+            &nbsp;
+        </div>
+        <div class="cont">
+            <a href="#" id="reset">reset</a>
+        </div>
+        <div class="cont">
+            &nbsp;
+        </div>
+        <div class="clear"></div>
+    </section>
     <section>
         <div class="cont">
             <ul>
