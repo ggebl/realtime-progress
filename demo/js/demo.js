@@ -18,7 +18,7 @@ var minuteOptions = {
     start : '15s',
     callbacks : {
         done : function( obj ) {
-            obj.rtSetTotal( obj.rtGetTotal() + 2 );
+            obj.rtProgress( 'setTotal',  obj.rtProgress('getTotal') + 2 );
         }
     }
 };
