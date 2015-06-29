@@ -1,3 +1,28 @@
+var ajaxFunction = function ( id ) {
+    var val = 0;
+    $.ajax({
+        url: "ajax.txt",
+        cache: false,
+        async: false,
+        success: function (data) {
+            var tmp = parseFloat(data);
+            if (!isNaN(tmp)){
+                val = tmp;
+            }
+        }
+    });
+
+    return val;
+};
+
+var ajaxCallback = function ( obj ) {
+    var tmp = ajaxFunction(0);
+    console.log(tmp);
+    obj.rtProgress( 'setTotal', tmp );
+
+};
+
+
 var minuteOptions = {
     labelText : 'zakázek',
     decimal : 1,
@@ -17,9 +42,8 @@ var minuteOptions = {
     ],
     start : '15s',
     callbacks : {
-        done : function( obj ) {
-            obj.rtProgress( 'setTotal',  obj.rtProgress('getTotal') + 2 );
-        }
+        done : ajaxCallback,
+        reset : ajaxCallback
     }
 };
 
