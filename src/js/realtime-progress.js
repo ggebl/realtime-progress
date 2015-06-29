@@ -242,6 +242,12 @@
             methods.reset();
         }
 
+        // destroy rt
+        this.rtDestroy = function () {
+            clearInterval(interval);
+            container.html('');
+        }
+
         // Establish our default settings
         settings = $.extend(defaultSettings, options);
         container = this;
