@@ -24,7 +24,10 @@
             rangeUnit : 's',
             refresh : '1s',
             animate : true,
-            callback : function ( obj ) {},
+            callbacks : {
+                reset :function ( obj ) {},
+                done :function ( obj ) {}
+            },
             start : null
         };
         // settings
@@ -117,7 +120,7 @@
                         methods.callback();
                     }
                     if( t > startN){
-                        methods.setStartTime();
+                        methods.reset();
                     }
                     return 0;
                 } else if ( t < 0) {
@@ -211,7 +214,13 @@
             // callback
             callback : function () {
                 methods.setStartTime();
-                settings.callback( container );
+                settings.callbacks.done( container );
+            },
+
+            //reset
+            reset : function () {
+                methods.setStartTime();
+                settings.callbacks.reset( container );
             }
         };
 
