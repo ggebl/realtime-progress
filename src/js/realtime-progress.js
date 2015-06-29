@@ -217,7 +217,7 @@
                 settings.callbacks.done( container );
             },
 
-            //reset
+            // reset
             reset : function () {
                 methods.setStartTime();
                 settings.callbacks.reset( container );
@@ -236,6 +236,11 @@
         this.rtGetTotal = function () {
             return settings.total;
         };
+
+        // reset rt
+        this.rtReset = function () {
+            methods.reset();
+        }
 
         // Establish our default settings
         settings = $.extend(defaultSettings, options);
